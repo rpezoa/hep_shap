@@ -1,0 +1,9 @@
+data/
+saved_models/
+.DS_Store
+*.log
+*.png
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
