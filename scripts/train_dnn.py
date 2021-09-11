@@ -82,9 +82,9 @@ scan_object = talos.Scan(x = X_train.to_numpy(),
                          y_val=y_val.to_numpy(),
                          params=p,
                          model=higgs_model,
-                         experiment_name='higgs')
+                         experiment_name='higgs_4')
 
-talos.Deploy(scan_object, model_name='higgs_deploy',metric='f1score')
+talos.Deploy(scan_object, model_name='higgs_deploy_4',metric='f1score')
 
 best_idx = scan_object.best_model(metric='val_f1score', asc=True)
 
@@ -94,4 +94,5 @@ print(model_id)
 
 model = activate_model(scan_object, model_id)
 
+model.save("higgs_model_4.h5")
 
